@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bus-xL-hzV">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Map View Controller-->
+        <scene sceneID="1pb-C0-3Zy">
+            <objects>
+                <viewController id="bus-xL-hzV" customClass="MapViewController" customModule="HotPepperAPISample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TkC-jc-GbG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="QyF-I2-O8g">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T0d-Zq-EDh">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="j3i-9V-Cpu">
+                                                <rect key="frame" x="16" y="8" width="382" height="40"/>
+                                                <subviews>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="住所を入力" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yBp-B4-QiY">
+                                                        <rect key="frame" x="0.0" y="0.0" width="334" height="40"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" textContentType="address-level1+2"/>
+                                                    </textField>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a22-om-QJn">
+                                                        <rect key="frame" x="342" y="0.0" width="40" height="40"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="a22-om-QJn" secondAttribute="height" multiplier="1:1" id="r3T-YA-loq"/>
+                                                            <constraint firstAttribute="height" constant="40" id="s9W-FI-Xiz"/>
+                                                        </constraints>
+                                                        <state key="normal" image="magnifyingglass" catalog="system"/>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="j3i-9V-Cpu" firstAttribute="top" secondItem="T0d-Zq-EDh" secondAttribute="top" constant="8" id="d8b-qQ-PQq"/>
+                                            <constraint firstAttribute="trailing" secondItem="j3i-9V-Cpu" secondAttribute="trailing" constant="16" id="lGP-IP-Owd"/>
+                                            <constraint firstAttribute="bottom" secondItem="j3i-9V-Cpu" secondAttribute="bottom" constant="8" id="mhD-7d-Lqh"/>
+                                            <constraint firstItem="j3i-9V-Cpu" firstAttribute="leading" secondItem="T0d-Zq-EDh" secondAttribute="leading" constant="16" id="pTI-jx-SD1"/>
+                                        </constraints>
+                                    </view>
+                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="roz-Mi-8M9">
+                                        <rect key="frame" x="0.0" y="56" width="414" height="762"/>
+                                    </mapView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="lx1-oe-U2D"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="QyF-I2-O8g" firstAttribute="top" secondItem="lx1-oe-U2D" secondAttribute="top" id="3dH-9h-09l"/>
+                            <constraint firstItem="QyF-I2-O8g" firstAttribute="leading" secondItem="lx1-oe-U2D" secondAttribute="leading" id="K9L-75-BwH"/>
+                            <constraint firstItem="lx1-oe-U2D" firstAttribute="bottom" secondItem="QyF-I2-O8g" secondAttribute="bottom" id="ZSF-AU-jFO"/>
+                            <constraint firstItem="lx1-oe-U2D" firstAttribute="trailing" secondItem="QyF-I2-O8g" secondAttribute="trailing" id="bxP-uZ-U1g"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="roz-Mi-8M9" id="6C6-wd-lVI"/>
+                        <outlet property="searchButton" destination="a22-om-QJn" id="15E-pM-jNN"/>
+                        <outlet property="searchTextField" destination="yBp-B4-QiY" id="IjG-Sl-ROj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="omj-Ua-G8y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-191.30434782608697" y="138.61607142857142"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
