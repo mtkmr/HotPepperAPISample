@@ -15,6 +15,9 @@ final class MapViewController: UIViewController {
     }
     
 //    MARK: - property
+    
+    private let semiModalPresentationManager = SemiModalPresentationManager()
+    
     //APIから受け取るデータ
     private var shops: [Shop] = []
     private var annotations: [CustomAnnotation] = []
@@ -48,10 +51,15 @@ final class MapViewController: UIViewController {
         }
     }
     
-//    MARK: - lifecycl
+//    MARK: - lifecycle
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: true)
+        //セミモーダルを表示
+        let searchPanelVC = SearchPanelViewController.makeFromStoryboard()
+        semiModalPresentationManager.viewController = searchPanelVC
+        present(searchPanelVC, animated: true)
     }
     
     override func viewWillDisappear(_ animated: Bool) {

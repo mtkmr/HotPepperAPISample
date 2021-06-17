@@ -26,6 +26,14 @@
 		8CC213362677BF5B009537F9 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC213352677BF5B009537F9 /* WebViewController.swift */; };
 		8CC213472679CC46009537F9 /* apiKey.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8CC213462679CC46009537F9 /* apiKey.plist */; };
 		8CC2134A2679CE26009537F9 /* KeyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC213492679CE26009537F9 /* KeyManager.swift */; };
+		8CC21353267B4498009537F9 /* SearchPanel.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CC21352267B4498009537F9 /* SearchPanel.storyboard */; };
+		8CC21356267B44AD009537F9 /* SearchPanelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC21355267B44AD009537F9 /* SearchPanelViewController.swift */; };
+		8CC2135A267B45E7009537F9 /* SemiModalPresentationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC21359267B45E7009537F9 /* SemiModalPresentationManager.swift */; };
+		8CC2135D267B47E4009537F9 /* SemiModalOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC2135C267B47E4009537F9 /* SemiModalOverlayView.swift */; };
+		8CC21360267B4A1B009537F9 /* SemiModalTopBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC2135F267B4A1B009537F9 /* SemiModalTopBarView.swift */; };
+		8CC21363267B4E1E009537F9 /* SemiModalPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC21362267B4E1E009537F9 /* SemiModalPresentationController.swift */; };
+		8CC21366267B6E04009537F9 /* SemiModalDismissalTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC21365267B6E04009537F9 /* SemiModalDismissalTransitionAnimator.swift */; };
+		8CC21369267B73FE009537F9 /* SemiModalDismissalInteractiveTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC21368267B73FE009537F9 /* SemiModalDismissalInteractiveTransition.swift */; };
 		DABB6C8BF97509C73A56F772 /* Pods_HotPepperAPISample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1A62E7675DFF16544D77A4E /* Pods_HotPepperAPISample.framework */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +61,14 @@
 		8CC213352677BF5B009537F9 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		8CC213462679CC46009537F9 /* apiKey.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = apiKey.plist; sourceTree = "<group>"; };
 		8CC213492679CE26009537F9 /* KeyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyManager.swift; sourceTree = "<group>"; };
+		8CC21352267B4498009537F9 /* SearchPanel.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SearchPanel.storyboard; sourceTree = "<group>"; };
+		8CC21355267B44AD009537F9 /* SearchPanelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPanelViewController.swift; sourceTree = "<group>"; };
+		8CC21359267B45E7009537F9 /* SemiModalPresentationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SemiModalPresentationManager.swift; sourceTree = "<group>"; };
+		8CC2135C267B47E4009537F9 /* SemiModalOverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SemiModalOverlayView.swift; sourceTree = "<group>"; };
+		8CC2135F267B4A1B009537F9 /* SemiModalTopBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SemiModalTopBarView.swift; sourceTree = "<group>"; };
+		8CC21362267B4E1E009537F9 /* SemiModalPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SemiModalPresentationController.swift; sourceTree = "<group>"; };
+		8CC21365267B6E04009537F9 /* SemiModalDismissalTransitionAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SemiModalDismissalTransitionAnimator.swift; sourceTree = "<group>"; };
+		8CC21368267B73FE009537F9 /* SemiModalDismissalInteractiveTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SemiModalDismissalInteractiveTransition.swift; sourceTree = "<group>"; };
 		E1A62E7675DFF16544D77A4E /* Pods_HotPepperAPISample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HotPepperAPISample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -98,6 +114,8 @@
 				8CC213102676D30E009537F9 /* View */,
 				8CC2129726746FE0009537F9 /* Map */,
 				8CC213312677BF44009537F9 /* Web */,
+				8CC21351267B446E009537F9 /* SearchPanel */,
+				8CC21350267B4402009537F9 /* SemiModal */,
 				8CC212A526747180009537F9 /* Utilities */,
 				8CC2130826763D36009537F9 /* Extension */,
 			);
@@ -159,6 +177,28 @@
 				8CC213352677BF5B009537F9 /* WebViewController.swift */,
 			);
 			path = Web;
+			sourceTree = "<group>";
+		};
+		8CC21350267B4402009537F9 /* SemiModal */ = {
+			isa = PBXGroup;
+			children = (
+				8CC21359267B45E7009537F9 /* SemiModalPresentationManager.swift */,
+				8CC21362267B4E1E009537F9 /* SemiModalPresentationController.swift */,
+				8CC2135C267B47E4009537F9 /* SemiModalOverlayView.swift */,
+				8CC2135F267B4A1B009537F9 /* SemiModalTopBarView.swift */,
+				8CC21365267B6E04009537F9 /* SemiModalDismissalTransitionAnimator.swift */,
+				8CC21368267B73FE009537F9 /* SemiModalDismissalInteractiveTransition.swift */,
+			);
+			path = SemiModal;
+			sourceTree = "<group>";
+		};
+		8CC21351267B446E009537F9 /* SearchPanel */ = {
+			isa = PBXGroup;
+			children = (
+				8CC21352267B4498009537F9 /* SearchPanel.storyboard */,
+				8CC21355267B44AD009537F9 /* SearchPanelViewController.swift */,
+			);
+			path = SearchPanel;
 			sourceTree = "<group>";
 		};
 		AB930DB73C47628AEED1C976 /* Pods */ = {
@@ -238,6 +278,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8CC2128126745A93009537F9 /* LaunchScreen.storyboard in Resources */,
+				8CC21353267B4498009537F9 /* SearchPanel.storyboard in Resources */,
 				8CC2127E26745A93009537F9 /* Assets.xcassets in Resources */,
 				8CC2129226746FD5009537F9 /* Map.storyboard in Resources */,
 				8CC213332677BF52009537F9 /* Web.storyboard in Resources */,
@@ -298,16 +339,23 @@
 				8CC2127526745A91009537F9 /* AppDelegate.swift in Sources */,
 				8CC2132A267784B4009537F9 /* CustomAnnotation.swift in Sources */,
 				8CC212C42674AADF009537F9 /* Geocoder.swift in Sources */,
+				8CC21360267B4A1B009537F9 /* SemiModalTopBarView.swift in Sources */,
 				8CC2132326774B0A009537F9 /* MKMapView+.swift in Sources */,
+				8CC21369267B73FE009537F9 /* SemiModalDismissalInteractiveTransition.swift in Sources */,
 				8CC2130E2676406B009537F9 /* UIViewController+.swift in Sources */,
 				8CC212A32674715E009537F9 /* Router.swift in Sources */,
+				8CC21363267B4E1E009537F9 /* SemiModalPresentationController.swift in Sources */,
 				8CC2129526746FDC009537F9 /* MapViewController.swift in Sources */,
 				8CC212A8267474AA009537F9 /* HotPepperAPI.swift in Sources */,
+				8CC21366267B6E04009537F9 /* SemiModalDismissalTransitionAnimator.swift in Sources */,
+				8CC21356267B44AD009537F9 /* SearchPanelViewController.swift in Sources */,
 				8CC2134A2679CE26009537F9 /* KeyManager.swift in Sources */,
+				8CC2135A267B45E7009537F9 /* SemiModalPresentationManager.swift in Sources */,
 				8CC2132F2677BD59009537F9 /* UIImage+.swift in Sources */,
 				8CC2129A2674700F009537F9 /* HotPepperModel.swift in Sources */,
 				8CC213362677BF5B009537F9 /* WebViewController.swift in Sources */,
 				8CC2130A26763D58009537F9 /* Storyboard+.swift in Sources */,
+				8CC2135D267B47E4009537F9 /* SemiModalOverlayView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -66,8 +66,8 @@
                     </view>
                     <connections>
                         <outlet property="mapView" destination="roz-Mi-8M9" id="6C6-wd-lVI"/>
-                        <outlet property="searchButton" destination="a22-om-QJn" id="15E-pM-jNN"/>
-                        <outlet property="searchTextField" destination="yBp-B4-QiY" id="IjG-Sl-ROj"/>
+                        <outlet property="searchButton" destination="a22-om-QJn" id="973-vC-6J2"/>
+                        <outlet property="searchTextField" destination="yBp-B4-QiY" id="cCM-Fy-aBA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="omj-Ua-G8y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
