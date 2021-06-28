@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8C4BC0D426898FD10022D660 /* MapPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4BC0D326898FD10022D660 /* MapPresenter.swift */; };
+		8C4BC0D92689C59A0022D660 /* WebPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4BC0D82689C59A0022D660 /* WebPresenter.swift */; };
 		8CC2127526745A91009537F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC2127426745A91009537F9 /* AppDelegate.swift */; };
 		8CC2127E26745A93009537F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8CC2127D26745A93009537F9 /* Assets.xcassets */; };
 		8CC2128126745A93009537F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CC2127F26745A93009537F9 /* LaunchScreen.storyboard */; };
@@ -32,6 +34,8 @@
 /* Begin PBXFileReference section */
 		23DA8CE1FC6D23E7F01EC7CC /* Pods-HotPepperAPISample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HotPepperAPISample.release.xcconfig"; path = "Target Support Files/Pods-HotPepperAPISample/Pods-HotPepperAPISample.release.xcconfig"; sourceTree = "<group>"; };
 		3B415C0DCE44C343A2FE2915 /* Pods-HotPepperAPISample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HotPepperAPISample.debug.xcconfig"; path = "Target Support Files/Pods-HotPepperAPISample/Pods-HotPepperAPISample.debug.xcconfig"; sourceTree = "<group>"; };
+		8C4BC0D326898FD10022D660 /* MapPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPresenter.swift; sourceTree = "<group>"; };
+		8C4BC0D82689C59A0022D660 /* WebPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebPresenter.swift; sourceTree = "<group>"; };
 		8CC2127126745A91009537F9 /* HotPepperAPISample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HotPepperAPISample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CC2127426745A91009537F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8CC2127D26745A93009537F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -68,6 +72,48 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8C4BC0CF26898F680022D660 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8CC2129126746FD5009537F9 /* Map.storyboard */,
+				8CC2129426746FDC009537F9 /* MapViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		8C4BC0D126898FA40022D660 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				8CC212A22674715E009537F9 /* Router.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		8C4BC0D626898FD90022D660 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				8C4BC0D326898FD10022D660 /* MapPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		8C4BC0DC2689E9AE0022D660 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8CC213322677BF52009537F9 /* Web.storyboard */,
+				8CC213352677BF5B009537F9 /* WebViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		8C4BC0DE2689E9B70022D660 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				8C4BC0D82689C59A0022D660 /* WebPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
 		8CC2126826745A91009537F9 = {
 			isa = PBXGroup;
 			children = (
@@ -95,10 +141,10 @@
 				8CC2128226745A93009537F9 /* Info.plist */,
 				8CC213462679CC46009537F9 /* apiKey.plist */,
 				8CC2129F2674701E009537F9 /* Model */,
-				8CC213102676D30E009537F9 /* View */,
 				8CC2129726746FE0009537F9 /* Map */,
 				8CC213312677BF44009537F9 /* Web */,
 				8CC212A526747180009537F9 /* Utilities */,
+				8C4BC0D126898FA40022D660 /* Router */,
 				8CC2130826763D36009537F9 /* Extension */,
 			);
 			path = HotPepperAPISample;
@@ -107,8 +153,9 @@
 		8CC2129726746FE0009537F9 /* Map */ = {
 			isa = PBXGroup;
 			children = (
-				8CC2129126746FD5009537F9 /* Map.storyboard */,
-				8CC2129426746FDC009537F9 /* MapViewController.swift */,
+				8CC213102676D30E009537F9 /* View */,
+				8C4BC0CF26898F680022D660 /* ViewController */,
+				8C4BC0D626898FD90022D660 /* Presenter */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -125,7 +172,6 @@
 		8CC212A526747180009537F9 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				8CC212A22674715E009537F9 /* Router.swift */,
 				8CC212A7267474AA009537F9 /* HotPepperAPI.swift */,
 				8CC212C32674AADF009537F9 /* Geocoder.swift */,
 				8CC213492679CE26009537F9 /* KeyManager.swift */,
@@ -155,8 +201,8 @@
 		8CC213312677BF44009537F9 /* Web */ = {
 			isa = PBXGroup;
 			children = (
-				8CC213322677BF52009537F9 /* Web.storyboard */,
-				8CC213352677BF5B009537F9 /* WebViewController.swift */,
+				8C4BC0DC2689E9AE0022D660 /* ViewController */,
+				8C4BC0DE2689E9B70022D660 /* Presenter */,
 			);
 			path = Web;
 			sourceTree = "<group>";
@@ -296,6 +342,8 @@
 			files = (
 				8CC2132026774710009537F9 /* CustomAnnotationView.swift in Sources */,
 				8CC2127526745A91009537F9 /* AppDelegate.swift in Sources */,
+				8C4BC0D426898FD10022D660 /* MapPresenter.swift in Sources */,
+				8C4BC0D92689C59A0022D660 /* WebPresenter.swift in Sources */,
 				8CC2132A267784B4009537F9 /* CustomAnnotation.swift in Sources */,
 				8CC212C42674AADF009537F9 /* Geocoder.swift in Sources */,
 				8CC2132326774B0A009537F9 /* MKMapView+.swift in Sources */,

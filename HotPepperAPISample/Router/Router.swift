@@ -15,7 +15,9 @@ final class Router {
     
     ///起動画面を表示する
     func showRoot(window: UIWindow?) {
-        let mapVC = MapViewController.makeFromStoryboard()
+        let mapVC = UIStoryboard.mapViewController
+        let presenter = MapPresenter(output: mapVC)
+        mapVC.inject(presenter: presenter)
         let nav = UINavigationController(rootViewController: mapVC)
         window?.rootViewController = nav
         window?.makeKeyAndVisible()
@@ -23,8 +25,10 @@ final class Router {
     }
     
     func showWeb(from: UIViewController, shop: Shop) {
-        let vc = WebViewController.makeFromStoryboard(shop: shop)
-        from.show(to: vc)
+        let webVC = UIStoryboard.webViewController
+        let presenter = WebPresenter(output: webVC, shop: shop)
+        webVC.inject(presenter: presenter)
+        from.show(to: webVC)
     }
     
 }
