@@ -22,7 +22,7 @@ class CustomAnnotation: NSObject, MKAnnotation {
         title: String?,
         subtitle: String?,
         glyphImage: UIImage? = UIImage(named: "restaurant"),
-        markerTintColor: UIColor? = .blue,
+        markerTintColor: UIColor? = .red,
         image: UIImage?,
         shopInfo: Shop
     ) {

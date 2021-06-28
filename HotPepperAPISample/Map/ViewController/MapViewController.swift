@@ -8,18 +8,17 @@
 import UIKit
 import MapKit
 import CoreLocation
+import IQKeyboardManager
 
 final class MapViewController: UIViewController {
-    static func makeFromStoryboard() -> MapViewController {
-        return UIStoryboard.mapViewController
+//    MARK: - Properties
+    private var annotations: [CustomAnnotation] = []
+    
+    private var presenter: MapPresenterInput!
+    func inject(presenter: MapPresenterInput) {
+        self.presenter = presenter
     }
     
-//    MARK: - property
-    //APIから受け取るデータ
-    private var shops: [Shop] = []
-    private var annotations: [CustomAnnotation] = []
-    private var latitude: Double?
-    private var longitude: Double?
     private let clusteringZoomLevelThreshold: Double = 18.0
     private var clusteringSwitch: Bool = true {
         didSet {
@@ -33,11 +32,10 @@ final class MapViewController: UIViewController {
     }
     
 //    MARK: - IBOutlet
-    @IBOutlet private weak var searchTextField: UITextField!
-    
-    @IBOutlet private weak var searchButton: UIButton! {
+    @IBOutlet private weak var searchBar: UISearchBar! {
         didSet {
-            searchButton.addTarget(self, action: #selector(searchButtonTapped(_:)), for: .touchUpInside)
+            searchBar.delegate = self
+            searchBar.backgroundImage = UIImage()
         }
     }
     
@@ -48,8 +46,7 @@ final class MapViewController: UIViewController {
         }
     }
     
-//    MARK: - lifecycle
-    
+//    MARK: - Lifecycle
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: true)
@@ -61,82 +58,19 @@ final class MapViewController: UIViewController {
     }
 }
 
-//MARK: - action method
-private extension MapViewController {
-    ///検索ボタンが押された
-    @objc func searchButtonTapped(_ sender: UIButton) {
+//MARK: - UISearchBarDelegate
+extension MapViewController: UISearchBarDelegate {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         guard
-            let addressStr = searchTextField.text, addressStr.count > 0
+            let addressStr = searchBar.text, addressStr.count > 0
         else {
             return
         }
-        Geocoder.geocode(from: addressStr) { [weak self] (geocodeResult) in
-            switch geocodeResult {
-            case .success(let placemarks):
-                let coordinate = placemarks.first?.location?.coordinate
-                //中心に移動
-                self?.setCenterLocation(coordinate: coordinate)
-                
-                self?.latitude = coordinate?.latitude
-                self?.longitude = coordinate?.longitude
-                let parameters = HotPepperAPIParameters(latitude: self?.latitude, longitude: self?.longitude)
-                HotPepperAPI.shared.get(parameters: parameters) { (apiResult) in
-                    switch apiResult {
-                    case .failure(let error):
-                        print(error.description)
-                    case .success(let results):
-                        //取得成功
-                        self?.shops = results.shop
-                        //マップのピンを更新
-                        self?.addAnnotationOnMap(shops: self?.shops ?? [])
-                    }
-                }
-            case .failure(let error):
-                print(error.description)
-            }
-        }
-    }
-}
-
-//MARK: - private method
-private extension MapViewController {
-    
-    ///縮尺と中心地の座標を設定する
-    private func setCenterLocation(coordinate:  CLLocationCoordinate2D?) {
-        guard let coordinate = coordinate else { return }
-        //delta: 1 = 約100kmとして
-        let span = MKCoordinateSpan(latitudeDelta: 0.015, longitudeDelta: 0.015)
-        let region = MKCoordinateRegion(center: coordinate, span: span)
-        mapView.setRegion(region, animated: true)
+        presenter.search(address: addressStr)
+        
+        IQKeyboardManager.shared().resignFirstResponder()
     }
     
-    ///ピンをマップに立てる
-    private func addAnnotationOnMap(shops: [Shop]) {
-        DispatchQueue.main.async {
-            //今あるマップのピンを除く
-            self.mapView.removeAnnotations(self.annotations)
-            //annotation配列をリセット
-            self.annotations.removeAll()
-            //配列に新しいピンを入れる
-            shops.forEach {
-                self.annotations.append(self.makeAnnotation(shop: $0))
-            }
-            //mapに立てる
-            self.mapView.addAnnotations(self.annotations)
-        }
-    }
-    
-    ///モデルを受け取ってピンを作成して返す
-    private func makeAnnotation(shop: Shop) -> CustomAnnotation {
-        let annotation = CustomAnnotation(
-            coordinate: CLLocationCoordinate2D(latitude: shop.lat, longitude: shop.lng),
-            title: shop.name,
-            subtitle: nil,
-            image: UIImage(url: shop.logoImage),
-            shopInfo: shop
-        )
-        return annotation
-    }
 }
 
 //MARK: - MKMapViewDelegate
@@ -177,8 +111,7 @@ extension MapViewController: MKMapViewDelegate {
     ///吹き出しがタップされたときに呼ばれる
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
         let annotationTapped = view.annotation as! CustomAnnotation
-        let shopInfo = annotationTapped.shopInfo
-        Router.shared.showWeb(from: self, shop: shopInfo)
+        presenter.didAnnotationViewTapped(annotation: annotationTapped)
     }
     
     ///mapの表示領域が変更されたときに呼ばれる
@@ -189,5 +122,50 @@ extension MapViewController: MKMapViewDelegate {
         } else {
             clusteringSwitch = true
         }
+    }
+}
+
+extension MapViewController: MapPresenterOutput {
+    func setCenterLocation(coordinate: CLLocationCoordinate2D?) {
+        guard let coordinate = coordinate else { return }
+        //delta: 1 = 約100kmとして
+        let span = MKCoordinateSpan(latitudeDelta: 0.015, longitudeDelta: 0.015)
+        let region = MKCoordinateRegion(center: coordinate, span: span)
+        mapView.setRegion(region, animated: true)
+    }
+    
+    func update(shops: [Shop]?) {
+        //mapのピンを更新する
+        DispatchQueue.main.async {
+            //今あるマップのピンを除く
+            self.mapView.removeAnnotations(self.annotations)
+            //annotation配列をリセット
+            self.annotations.removeAll()
+            //配列に新しいピンを入れる
+            shops?.forEach {
+                self.annotations.append(CustomAnnotation(
+                    coordinate: CLLocationCoordinate2D(
+                        latitude: $0.lat,
+                        longitude: $0.lng),
+                        title: $0.name,
+                        subtitle: nil,
+                        image: UIImage(url: $0.logoImage),
+                        shopInfo: $0))
+            }
+            //mapに立てる
+            self.mapView.addAnnotations(self.annotations)
+        }
+    }
+    
+    func showWeb(shop: Shop) {
+        Router.shared.showWeb(from: self, shop: shop)
+    }
+    
+    func handleGeocoding(error: GeocodingError) {
+        print(error.description)
+    }
+    
+    func handleHotPepperAPI(error: HotPepperAPIError) {
+        print(error.description)
     }
 }

@@ -22,8 +22,15 @@ enum GeocodingError: Error {
     }
 }
 
-struct Geocoder {
-    static func geocode(from address: String, completion: ((Result<[CLPlacemark], GeocodingError>) -> Void)? = nil) {
+protocol GeocoderProtocol: AnyObject {
+    func geocode(from address: String, completion: ((Result<[CLPlacemark], GeocodingError>) -> Void)?)
+}
+
+final class Geocoder: GeocoderProtocol {
+    static let shared = Geocoder()
+    private init() {}
+    
+    func geocode(from address: String, completion: ((Result<[CLPlacemark], GeocodingError>) -> Void)? = nil) {
         let geocoder = CLGeocoder()
         geocoder.geocodeAddressString(address) { (placemarks, error) in
             if let error = error {
@@ -41,3 +48,4 @@ struct Geocoder {
         }
     }
 }
+
