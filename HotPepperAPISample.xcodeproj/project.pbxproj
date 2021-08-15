@@ -7,26 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8C4BC0D426898FD10022D660 /* MapPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4BC0D326898FD10022D660 /* MapPresenter.swift */; };
+		8C4BC0D426898FD10022D660 /* ShopListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4BC0D326898FD10022D660 /* ShopListPresenter.swift */; };
 		8C4BC0D92689C59A0022D660 /* WebPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4BC0D82689C59A0022D660 /* WebPresenter.swift */; };
+		8C8F8A3326C9562100DDBDA8 /* NSObjectProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8F8A3226C9562100DDBDA8 /* NSObjectProtocol.swift */; };
+		8C8F8A3626C9587000DDBDA8 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8F8A3526C9587000DDBDA8 /* APIClient.swift */; };
+		8C8F8A4826C9694600DDBDA8 /* ShopListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8F8A4626C9694600DDBDA8 /* ShopListTableViewCell.swift */; };
+		8C8F8A4926C9694600DDBDA8 /* ShopListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C8F8A4726C9694600DDBDA8 /* ShopListTableViewCell.xib */; };
+		8C8F8A4C26C96B3600DDBDA8 /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8F8A4B26C96B3600DDBDA8 /* ShadowView.swift */; };
+		8C8F8A4F26C9852800DDBDA8 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8F8A4E26C9852800DDBDA8 /* Alert.swift */; };
 		8CC2127526745A91009537F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC2127426745A91009537F9 /* AppDelegate.swift */; };
 		8CC2127E26745A93009537F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8CC2127D26745A93009537F9 /* Assets.xcassets */; };
 		8CC2128126745A93009537F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CC2127F26745A93009537F9 /* LaunchScreen.storyboard */; };
-		8CC2129226746FD5009537F9 /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CC2129126746FD5009537F9 /* Map.storyboard */; };
-		8CC2129526746FDC009537F9 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC2129426746FDC009537F9 /* MapViewController.swift */; };
+		8CC2129526746FDC009537F9 /* ShopListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC2129426746FDC009537F9 /* ShopListViewController.swift */; };
 		8CC2129A2674700F009537F9 /* HotPepperModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC212992674700F009537F9 /* HotPepperModel.swift */; };
 		8CC212A32674715E009537F9 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC212A22674715E009537F9 /* Router.swift */; };
-		8CC212A8267474AA009537F9 /* HotPepperAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC212A7267474AA009537F9 /* HotPepperAPI.swift */; };
-		8CC212C42674AADF009537F9 /* Geocoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC212C32674AADF009537F9 /* Geocoder.swift */; };
 		8CC2130A26763D58009537F9 /* Storyboard+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC2130926763D58009537F9 /* Storyboard+.swift */; };
 		8CC2130E2676406B009537F9 /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC2130D2676406B009537F9 /* UIViewController+.swift */; };
-		8CC2132026774710009537F9 /* CustomAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC2131F26774710009537F9 /* CustomAnnotationView.swift */; };
 		8CC2132326774B0A009537F9 /* MKMapView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC2132226774B0A009537F9 /* MKMapView+.swift */; };
-		8CC2132A267784B4009537F9 /* CustomAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC21329267784B4009537F9 /* CustomAnnotation.swift */; };
 		8CC2132F2677BD59009537F9 /* UIImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC2132E2677BD59009537F9 /* UIImage+.swift */; };
 		8CC213332677BF52009537F9 /* Web.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CC213322677BF52009537F9 /* Web.storyboard */; };
 		8CC213362677BF5B009537F9 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC213352677BF5B009537F9 /* WebViewController.swift */; };
-		8CC213472679CC46009537F9 /* apiKey.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8CC213462679CC46009537F9 /* apiKey.plist */; };
+		8CC213472679CC46009537F9 /* ApiKey.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8CC213462679CC46009537F9 /* ApiKey.plist */; };
 		8CC2134A2679CE26009537F9 /* KeyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC213492679CE26009537F9 /* KeyManager.swift */; };
 		DABB6C8BF97509C73A56F772 /* Pods_HotPepperAPISample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1A62E7675DFF16544D77A4E /* Pods_HotPepperAPISample.framework */; };
 /* End PBXBuildFile section */
@@ -34,28 +35,29 @@
 /* Begin PBXFileReference section */
 		23DA8CE1FC6D23E7F01EC7CC /* Pods-HotPepperAPISample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HotPepperAPISample.release.xcconfig"; path = "Target Support Files/Pods-HotPepperAPISample/Pods-HotPepperAPISample.release.xcconfig"; sourceTree = "<group>"; };
 		3B415C0DCE44C343A2FE2915 /* Pods-HotPepperAPISample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HotPepperAPISample.debug.xcconfig"; path = "Target Support Files/Pods-HotPepperAPISample/Pods-HotPepperAPISample.debug.xcconfig"; sourceTree = "<group>"; };
-		8C4BC0D326898FD10022D660 /* MapPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPresenter.swift; sourceTree = "<group>"; };
+		8C4BC0D326898FD10022D660 /* ShopListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopListPresenter.swift; sourceTree = "<group>"; };
 		8C4BC0D82689C59A0022D660 /* WebPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebPresenter.swift; sourceTree = "<group>"; };
+		8C8F8A3226C9562100DDBDA8 /* NSObjectProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObjectProtocol.swift; sourceTree = "<group>"; };
+		8C8F8A3526C9587000DDBDA8 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		8C8F8A4626C9694600DDBDA8 /* ShopListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopListTableViewCell.swift; sourceTree = "<group>"; };
+		8C8F8A4726C9694600DDBDA8 /* ShopListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShopListTableViewCell.xib; sourceTree = "<group>"; };
+		8C8F8A4B26C96B3600DDBDA8 /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
+		8C8F8A4E26C9852800DDBDA8 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		8CC2127126745A91009537F9 /* HotPepperAPISample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HotPepperAPISample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CC2127426745A91009537F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8CC2127D26745A93009537F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8CC2128026745A93009537F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8CC2128226745A93009537F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8CC2129126746FD5009537F9 /* Map.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Map.storyboard; sourceTree = "<group>"; };
-		8CC2129426746FDC009537F9 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		8CC2129426746FDC009537F9 /* ShopListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopListViewController.swift; sourceTree = "<group>"; };
 		8CC212992674700F009537F9 /* HotPepperModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotPepperModel.swift; sourceTree = "<group>"; };
 		8CC212A22674715E009537F9 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
-		8CC212A7267474AA009537F9 /* HotPepperAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotPepperAPI.swift; sourceTree = "<group>"; };
-		8CC212C32674AADF009537F9 /* Geocoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Geocoder.swift; sourceTree = "<group>"; };
 		8CC2130926763D58009537F9 /* Storyboard+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Storyboard+.swift"; sourceTree = "<group>"; };
 		8CC2130D2676406B009537F9 /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
-		8CC2131F26774710009537F9 /* CustomAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAnnotationView.swift; sourceTree = "<group>"; };
 		8CC2132226774B0A009537F9 /* MKMapView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKMapView+.swift"; sourceTree = "<group>"; };
-		8CC21329267784B4009537F9 /* CustomAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAnnotation.swift; sourceTree = "<group>"; };
 		8CC2132E2677BD59009537F9 /* UIImage+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+.swift"; sourceTree = "<group>"; };
 		8CC213322677BF52009537F9 /* Web.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Web.storyboard; sourceTree = "<group>"; };
 		8CC213352677BF5B009537F9 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
-		8CC213462679CC46009537F9 /* apiKey.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = apiKey.plist; sourceTree = "<group>"; };
+		8CC213462679CC46009537F9 /* ApiKey.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = ApiKey.plist; sourceTree = "<group>"; };
 		8CC213492679CE26009537F9 /* KeyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyManager.swift; sourceTree = "<group>"; };
 		E1A62E7675DFF16544D77A4E /* Pods_HotPepperAPISample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HotPepperAPISample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -72,15 +74,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		8C4BC0CF26898F680022D660 /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-				8CC2129126746FD5009537F9 /* Map.storyboard */,
-				8CC2129426746FDC009537F9 /* MapViewController.swift */,
-			);
-			path = ViewController;
-			sourceTree = "<group>";
-		};
 		8C4BC0D126898FA40022D660 /* Router */ = {
 			isa = PBXGroup;
 			children = (
@@ -92,7 +85,7 @@
 		8C4BC0D626898FD90022D660 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				8C4BC0D326898FD10022D660 /* MapPresenter.swift */,
+				8C4BC0D326898FD10022D660 /* ShopListPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -139,32 +132,30 @@
 				8CC2127D26745A93009537F9 /* Assets.xcassets */,
 				8CC2127F26745A93009537F9 /* LaunchScreen.storyboard */,
 				8CC2128226745A93009537F9 /* Info.plist */,
-				8CC213462679CC46009537F9 /* apiKey.plist */,
-				8CC2129F2674701E009537F9 /* Model */,
-				8CC2129726746FE0009537F9 /* Map */,
-				8CC213312677BF44009537F9 /* Web */,
-				8CC212A526747180009537F9 /* Utilities */,
+				8CC213462679CC46009537F9 /* ApiKey.plist */,
 				8C4BC0D126898FA40022D660 /* Router */,
+				8CC212A526747180009537F9 /* Utilities */,
 				8CC2130826763D36009537F9 /* Extension */,
+				8CC2129F2674701E009537F9 /* Model */,
+				8CC2129726746FE0009537F9 /* ShopList */,
+				8CC213312677BF44009537F9 /* Web */,
 			);
 			path = HotPepperAPISample;
 			sourceTree = "<group>";
 		};
-		8CC2129726746FE0009537F9 /* Map */ = {
+		8CC2129726746FE0009537F9 /* ShopList */ = {
 			isa = PBXGroup;
 			children = (
 				8CC213102676D30E009537F9 /* View */,
-				8C4BC0CF26898F680022D660 /* ViewController */,
 				8C4BC0D626898FD90022D660 /* Presenter */,
 			);
-			path = Map;
+			path = ShopList;
 			sourceTree = "<group>";
 		};
 		8CC2129F2674701E009537F9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				8CC212992674700F009537F9 /* HotPepperModel.swift */,
-				8CC21329267784B4009537F9 /* CustomAnnotation.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -172,9 +163,9 @@
 		8CC212A526747180009537F9 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				8CC212A7267474AA009537F9 /* HotPepperAPI.swift */,
-				8CC212C32674AADF009537F9 /* Geocoder.swift */,
 				8CC213492679CE26009537F9 /* KeyManager.swift */,
+				8C8F8A3526C9587000DDBDA8 /* APIClient.swift */,
+				8C8F8A4E26C9852800DDBDA8 /* Alert.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -186,6 +177,7 @@
 				8CC2130D2676406B009537F9 /* UIViewController+.swift */,
 				8CC2132226774B0A009537F9 /* MKMapView+.swift */,
 				8CC2132E2677BD59009537F9 /* UIImage+.swift */,
+				8C8F8A3226C9562100DDBDA8 /* NSObjectProtocol.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -193,7 +185,10 @@
 		8CC213102676D30E009537F9 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				8CC2131F26774710009537F9 /* CustomAnnotationView.swift */,
+				8CC2129426746FDC009537F9 /* ShopListViewController.swift */,
+				8C8F8A4626C9694600DDBDA8 /* ShopListTableViewCell.swift */,
+				8C8F8A4726C9694600DDBDA8 /* ShopListTableViewCell.xib */,
+				8C8F8A4B26C96B3600DDBDA8 /* ShadowView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -285,9 +280,9 @@
 			files = (
 				8CC2128126745A93009537F9 /* LaunchScreen.storyboard in Resources */,
 				8CC2127E26745A93009537F9 /* Assets.xcassets in Resources */,
-				8CC2129226746FD5009537F9 /* Map.storyboard in Resources */,
 				8CC213332677BF52009537F9 /* Web.storyboard in Resources */,
-				8CC213472679CC46009537F9 /* apiKey.plist in Resources */,
+				8CC213472679CC46009537F9 /* ApiKey.plist in Resources */,
+				8C8F8A4926C9694600DDBDA8 /* ShopListTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,19 +335,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8CC2132026774710009537F9 /* CustomAnnotationView.swift in Sources */,
 				8CC2127526745A91009537F9 /* AppDelegate.swift in Sources */,
-				8C4BC0D426898FD10022D660 /* MapPresenter.swift in Sources */,
+				8C4BC0D426898FD10022D660 /* ShopListPresenter.swift in Sources */,
+				8C8F8A3626C9587000DDBDA8 /* APIClient.swift in Sources */,
+				8C8F8A4F26C9852800DDBDA8 /* Alert.swift in Sources */,
 				8C4BC0D92689C59A0022D660 /* WebPresenter.swift in Sources */,
-				8CC2132A267784B4009537F9 /* CustomAnnotation.swift in Sources */,
-				8CC212C42674AADF009537F9 /* Geocoder.swift in Sources */,
 				8CC2132326774B0A009537F9 /* MKMapView+.swift in Sources */,
 				8CC2130E2676406B009537F9 /* UIViewController+.swift in Sources */,
 				8CC212A32674715E009537F9 /* Router.swift in Sources */,
-				8CC2129526746FDC009537F9 /* MapViewController.swift in Sources */,
-				8CC212A8267474AA009537F9 /* HotPepperAPI.swift in Sources */,
+				8CC2129526746FDC009537F9 /* ShopListViewController.swift in Sources */,
+				8C8F8A3326C9562100DDBDA8 /* NSObjectProtocol.swift in Sources */,
 				8CC2134A2679CE26009537F9 /* KeyManager.swift in Sources */,
+				8C8F8A4826C9694600DDBDA8 /* ShopListTableViewCell.swift in Sources */,
 				8CC2132F2677BD59009537F9 /* UIImage+.swift in Sources */,
+				8C8F8A4C26C96B3600DDBDA8 /* ShadowView.swift in Sources */,
 				8CC2129A2674700F009537F9 /* HotPepperModel.swift in Sources */,
 				8CC213362677BF5B009537F9 /* WebViewController.swift in Sources */,
 				8CC2130A26763D58009537F9 /* Storyboard+.swift in Sources */,

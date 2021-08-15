@@ -15,10 +15,10 @@ final class Router {
     
     ///起動画面を表示する
     func showRoot(window: UIWindow?) {
-        let mapVC = UIStoryboard.mapViewController
-        let presenter = MapPresenter(output: mapVC)
-        mapVC.inject(presenter: presenter)
-        let nav = UINavigationController(rootViewController: mapVC)
+        let shopListVC = ShopListViewController()
+        let presenter = ShopListPresenter(output: shopListVC)
+        shopListVC.inject(presenter: presenter)
+        let nav = UINavigationController(rootViewController: shopListVC)
         window?.rootViewController = nav
         window?.makeKeyAndVisible()
         self.window = window
