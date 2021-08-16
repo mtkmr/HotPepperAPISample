@@ -11,6 +11,7 @@ protocol ShopListPresenterInput {
     var numberOfRowsInSection: Int { get }
     func searchShops(from keyword: String?)
     func shopData(at indexPath: IndexPath) -> Shop
+    func didSelectRow(at indexPath: IndexPath)
 }
 
 protocol ShopListPresenterOutput: AnyObject {
@@ -34,7 +35,7 @@ final class ShopListPresenter {
 }
 
 extension ShopListPresenter: ShopListPresenterInput {
-    
+   
     var numberOfRowsInSection: Int {
         shops.count
     }
@@ -66,4 +67,10 @@ extension ShopListPresenter: ShopListPresenterInput {
             }
         )
     }
+    
+    func didSelectRow(at indexPath: IndexPath) {
+        output.showWeb(shop: shops[indexPath.row])
+    }
+    
+    
 }

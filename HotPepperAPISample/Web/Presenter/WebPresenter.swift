@@ -13,6 +13,8 @@ protocol WebPresenterInput {
 
 protocol WebPresenterOutput: AnyObject {
     func load(request: URLRequest)
+    func startSpinner()
+    func stopSpinner()
 }
 
 final class WebPresenter {
@@ -27,6 +29,7 @@ final class WebPresenter {
 
 extension WebPresenter: WebPresenterInput {
     func viewDidLoad() {
+        output.startSpinner()
         let urlStr = shop.urls.pc
         guard
             let url = URL(string: urlStr)
