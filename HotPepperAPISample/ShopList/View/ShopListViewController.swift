@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import IQKeyboardManager
 
 final class ShopListViewController: UIViewController {
 //    MARK: - Properties
