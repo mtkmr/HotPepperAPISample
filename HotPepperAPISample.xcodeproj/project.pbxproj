@@ -21,11 +21,9 @@
 		8CC2129526746FDC009537F9 /* ShopListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC2129426746FDC009537F9 /* ShopListViewController.swift */; };
 		8CC2129A2674700F009537F9 /* HotPepperModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC212992674700F009537F9 /* HotPepperModel.swift */; };
 		8CC212A32674715E009537F9 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC212A22674715E009537F9 /* Router.swift */; };
-		8CC2130A26763D58009537F9 /* Storyboard+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC2130926763D58009537F9 /* Storyboard+.swift */; };
 		8CC2130E2676406B009537F9 /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC2130D2676406B009537F9 /* UIViewController+.swift */; };
 		8CC2132326774B0A009537F9 /* MKMapView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC2132226774B0A009537F9 /* MKMapView+.swift */; };
 		8CC2132F2677BD59009537F9 /* UIImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC2132E2677BD59009537F9 /* UIImage+.swift */; };
-		8CC213332677BF52009537F9 /* Web.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CC213322677BF52009537F9 /* Web.storyboard */; };
 		8CC213362677BF5B009537F9 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC213352677BF5B009537F9 /* WebViewController.swift */; };
 		8CC213472679CC46009537F9 /* ApiKey.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8CC213462679CC46009537F9 /* ApiKey.plist */; };
 		8CC2134A2679CE26009537F9 /* KeyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC213492679CE26009537F9 /* KeyManager.swift */; };
@@ -51,11 +49,9 @@
 		8CC2129426746FDC009537F9 /* ShopListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopListViewController.swift; sourceTree = "<group>"; };
 		8CC212992674700F009537F9 /* HotPepperModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotPepperModel.swift; sourceTree = "<group>"; };
 		8CC212A22674715E009537F9 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
-		8CC2130926763D58009537F9 /* Storyboard+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Storyboard+.swift"; sourceTree = "<group>"; };
 		8CC2130D2676406B009537F9 /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
 		8CC2132226774B0A009537F9 /* MKMapView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKMapView+.swift"; sourceTree = "<group>"; };
 		8CC2132E2677BD59009537F9 /* UIImage+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+.swift"; sourceTree = "<group>"; };
-		8CC213322677BF52009537F9 /* Web.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Web.storyboard; sourceTree = "<group>"; };
 		8CC213352677BF5B009537F9 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		8CC213462679CC46009537F9 /* ApiKey.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = ApiKey.plist; sourceTree = "<group>"; };
 		8CC213492679CE26009537F9 /* KeyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyManager.swift; sourceTree = "<group>"; };
@@ -93,7 +89,6 @@
 		8C4BC0DC2689E9AE0022D660 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				8CC213322677BF52009537F9 /* Web.storyboard */,
 				8CC213352677BF5B009537F9 /* WebViewController.swift */,
 			);
 			path = ViewController;
@@ -136,7 +131,6 @@
 				8C4BC0D126898FA40022D660 /* Router */,
 				8CC212A526747180009537F9 /* Utilities */,
 				8CC2130826763D36009537F9 /* Extension */,
-				8CC2129F2674701E009537F9 /* Model */,
 				8CC2129726746FE0009537F9 /* ShopList */,
 				8CC213312677BF44009537F9 /* Web */,
 			);
@@ -146,6 +140,7 @@
 		8CC2129726746FE0009537F9 /* ShopList */ = {
 			isa = PBXGroup;
 			children = (
+				8CC2129F2674701E009537F9 /* Model */,
 				8CC213102676D30E009537F9 /* View */,
 				8C4BC0D626898FD90022D660 /* Presenter */,
 			);
@@ -173,7 +168,6 @@
 		8CC2130826763D36009537F9 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				8CC2130926763D58009537F9 /* Storyboard+.swift */,
 				8CC2130D2676406B009537F9 /* UIViewController+.swift */,
 				8CC2132226774B0A009537F9 /* MKMapView+.swift */,
 				8CC2132E2677BD59009537F9 /* UIImage+.swift */,
@@ -280,7 +274,6 @@
 			files = (
 				8CC2128126745A93009537F9 /* LaunchScreen.storyboard in Resources */,
 				8CC2127E26745A93009537F9 /* Assets.xcassets in Resources */,
-				8CC213332677BF52009537F9 /* Web.storyboard in Resources */,
 				8CC213472679CC46009537F9 /* ApiKey.plist in Resources */,
 				8C8F8A4926C9694600DDBDA8 /* ShopListTableViewCell.xib in Resources */,
 			);
@@ -351,7 +344,6 @@
 				8C8F8A4C26C96B3600DDBDA8 /* ShadowView.swift in Sources */,
 				8CC2129A2674700F009537F9 /* HotPepperModel.swift in Sources */,
 				8CC213362677BF5B009537F9 /* WebViewController.swift in Sources */,
-				8CC2130A26763D58009537F9 /* Storyboard+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

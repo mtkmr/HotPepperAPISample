@@ -155,6 +155,12 @@ extension ShopListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         100
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        presenter.didSelectRow(at: indexPath)
+    }
+    
 }
 
 //MARK: - UITableViewDataSource
@@ -172,6 +178,7 @@ extension ShopListViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(
             withIdentifier: ShopListTableViewCell.className,
             for: indexPath) as! ShopListTableViewCell
+        cell.isHighlighted = false
         let shopData = presenter.shopData(at: indexPath)
         cell.configure(shop: shopData)
         

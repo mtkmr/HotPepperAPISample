@@ -25,7 +25,7 @@ final class Router {
     }
     
     func showWeb(from: UIViewController, shop: Shop) {
-        let webVC = UIStoryboard.webViewController
+        let webVC = WebViewController()
         let presenter = WebPresenter(output: webVC, shop: shop)
         webVC.inject(presenter: presenter)
         from.show(to: webVC)
