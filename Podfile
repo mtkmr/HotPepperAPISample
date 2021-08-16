@@ -1,4 +1,4 @@
-platform :ios, '13.0'
+platform :ios, '14.1'
 
 target 'HotPepperAPISample' do
   # Comment the next line if you don't want to use dynamic frameworks
@@ -6,6 +6,6 @@ target 'HotPepperAPISample' do
 
   # Pods for HotPepperAPISample
 
-  pod 'IQKeyboardManager'
+  pod 'IQKeyboardManagerSwift'
 
 end
